@@ -1,0 +1,3 @@
+rand:
+  username: rand
+  password_digest: <%= BCrypt::Password.create('password') %>
