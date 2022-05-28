@@ -7,7 +7,7 @@
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
       <div class="content">
-        <%= render 'chatbox'%>
+        <%= render 'chatbox', messages: @messages %>
       </div>
       <div class="extra content">
         <%= render 'input_message' %>

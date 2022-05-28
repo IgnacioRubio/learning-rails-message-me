@@ -1,11 +1,11 @@
-<div class="ui feed">
-  <div class="event">
-    <div class="content">
-      <div class="summary">
-        <em>Christian Rocha:</em> Text a message
+<% messages.each do |message| %>
+  <div class="ui feed">
+    <div class="event">
+      <div class="content">
+        <div class="summary">
+          <em><%= message.user.username %>:</em> <%= message.body %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
+<% end %>
