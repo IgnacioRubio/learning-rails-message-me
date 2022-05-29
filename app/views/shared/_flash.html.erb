@@ -1,0 +1,20 @@
+<% flash.each do |type, msg| %>
+  <script>
+    let toast;
+
+    switch ('<%= type %>') {
+      case 'notice':
+        toast = toastr.success;
+        break;
+      case 'error':
+        toast = toastr.error;
+        break;
+      default:
+        toast = toastr.info;
+        break;
+    }
+
+    toast('<%= msg %>');
+  </script>
+<% end %>
+

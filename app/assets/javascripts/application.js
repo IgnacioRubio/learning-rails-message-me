@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require semantic-ui
+//= require toastr
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
