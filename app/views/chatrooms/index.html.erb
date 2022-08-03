@@ -6,8 +6,10 @@
 <div class="ui two column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <%= render 'chatbox', messages: @messages %>
+      <div id="messages" class="content">
+        <div id="messageContainer" class="ui feed">
+          <%= render @messages %>
+        </div>
       </div>
       <div class="extra content">
         <%= render 'input_message' %>

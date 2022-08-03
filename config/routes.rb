@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 
   # MESSAGES
   post 'message', to: 'messages#create'
+
+  # CHANNEL
+  mount ActionCable.server, at: '/cable'
 end

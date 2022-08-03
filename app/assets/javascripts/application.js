@@ -18,6 +18,31 @@
 //= require toastr
 //= require_tree .
 
+const scrollBottom = () => {
+  messagesSelector = $('#messages');
+
+  if (messagesSelector.length > 0) {
+    messagesSelector.scrollTop(messagesSelector[0].scrollHeight);
+  }
+}
+
+const submitMessage = () => {
+  messageBodySelector = $('#message_body');
+
+  messageBodySelector.on('keydown', (e) => {
+    if (e.keyCode == 13) {
+      $('button').click();
+      e.target.value = "";
+    }
+  });
+}
+
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
+
+  // move chat scroll to the bottom
+  scrollBottom();
+
+  // listen input from chat to press enter
+  submitMessage();
 });
